@@ -1,0 +1,31 @@
+version: '3'
+services:
+  db:
+    build:
+      context: ./MySQL
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: test_db
+      MYSQL_USER: test
+      MYSQL_PASSWORD: password
+    container_name: go_db
+    ports:
+      - "3306:3306"
+    tty: true
+    volumes:
+      - ./MySQL/mysql_init:/docker-entrypoint-initdb.d
+      - ./MySQL/mysql_data:/var/lib/mysql
+    command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci --skip-character-set-client-handshake
+  app:
+    build:
+      context: ./Go
+    volumes:
+      - "./Go:/go/src/app"
+    container_name: go_app
+    ports:
+      - "8080:8080"
+      - "8088:8088"
+    tty: true
+    depends_on:
+      - db
+    command: bee run
