@@ -1,8 +1,8 @@
 package controllers
 
 import (
+	"app/api/models"
 	"encoding/json"
-	"portal/api/models"
 
 	"github.com/astaxie/beego"
 )
