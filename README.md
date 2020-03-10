@@ -12,12 +12,11 @@
  go get -u github.com/astaxie/beego
  go get -u github.com/beego/bee
 ```
-
-- 開発環境を実行
+## 開発環境を実行
 
 `docker-compose up`
 
-- ビルド 入って build
+## ビルド
 
 ``` bash
 docker-compose up -d
@@ -25,10 +24,19 @@ docker exec -it go_app bash
 go build
 ```
 
-- バイナリを実行(Linux環境用)
+もしくは
 
-`./api`
+```
+docker-compose build
+```
 
-実行に関してはワンバイナリで済む実装になりそうだけど運用次第で検討
+## バイナリを実行(Linux環境用)
 
-たぶんないだろうけどMACでバイナリ実行したい時はクロスコンパイルがいるよ
+```
+docker-compose up -d
+docker exec -it go_app bash
+./api
+```
+
+## Linux以外の環境でバイナリの実行
+一旦クロスコンパイルは無視してます。
