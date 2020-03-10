@@ -14,6 +14,17 @@
 
 `docker-compose up`
 
+## Scaffoldingを行う(Model定義 & Controller作成 & Migration）
+例
+`
+docker exec -it go_app bash
+bee generate scaffold comment -fields="content:string" -driver=mysql -conn="test:password@tcp(db:3306)/test_db"
+`
+
+bee generate scaffold [モデル名] -fields="カラム定義"  -driver=mysql -conn="[ユーザー]:[パスワード]@tcp(db:[ポート])/スキーマ"
+
+[カラムの型等は公式ドキュメントを参照](https://beego.me/docs/mvc/model/models.md#mysql)
+
 ## ビルド
 
 ``` bash
