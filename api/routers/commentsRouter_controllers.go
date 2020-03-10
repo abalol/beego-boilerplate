@@ -7,6 +7,51 @@ import (
 
 func init() {
 
+    beego.GlobalControllerRouter["app/api/controllers:CommentController"] = append(beego.GlobalControllerRouter["app/api/controllers:CommentController"],
+        beego.ControllerComments{
+            Method: "Post",
+            Router: `/`,
+            AllowHTTPMethods: []string{"post"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["app/api/controllers:CommentController"] = append(beego.GlobalControllerRouter["app/api/controllers:CommentController"],
+        beego.ControllerComments{
+            Method: "GetAll",
+            Router: `/`,
+            AllowHTTPMethods: []string{"get"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["app/api/controllers:CommentController"] = append(beego.GlobalControllerRouter["app/api/controllers:CommentController"],
+        beego.ControllerComments{
+            Method: "GetOne",
+            Router: `/:id`,
+            AllowHTTPMethods: []string{"get"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["app/api/controllers:CommentController"] = append(beego.GlobalControllerRouter["app/api/controllers:CommentController"],
+        beego.ControllerComments{
+            Method: "Put",
+            Router: `/:id`,
+            AllowHTTPMethods: []string{"put"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["app/api/controllers:CommentController"] = append(beego.GlobalControllerRouter["app/api/controllers:CommentController"],
+        beego.ControllerComments{
+            Method: "Delete",
+            Router: `/:id`,
+            AllowHTTPMethods: []string{"delete"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
     beego.GlobalControllerRouter["app/api/controllers:ObjectController"] = append(beego.GlobalControllerRouter["app/api/controllers:ObjectController"],
         beego.ControllerComments{
             Method: "Post",

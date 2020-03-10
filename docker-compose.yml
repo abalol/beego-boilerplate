@@ -28,4 +28,4 @@ services:
     tty: true
     depends_on:
       - db
-    command: bee run
+    command: bee run # -downdoc=true -gendoc=true
