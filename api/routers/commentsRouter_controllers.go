@@ -97,6 +97,15 @@ func init() {
             Filters: nil,
             Params: nil})
 
+    beego.GlobalControllerRouter["app/api/controllers:PingController"] = append(beego.GlobalControllerRouter["app/api/controllers:PingController"],
+        beego.ControllerComments{
+            Method: "GetSample",
+            Router: `/sample`,
+            AllowHTTPMethods: []string{"get"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
     beego.GlobalControllerRouter["app/api/controllers:UserController"] = append(beego.GlobalControllerRouter["app/api/controllers:UserController"],
         beego.ControllerComments{
             Method: "Post",

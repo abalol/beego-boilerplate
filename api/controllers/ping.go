@@ -62,6 +62,21 @@ func (c *PingController) GetOne() {
 	c.ServeJSON()
 }
 
+// GetSample ...
+// @Title Get Sample
+// @Description ハッシュをjsonで返すサンプルです
+// @Param nothing nothing nothing nothing
+// @Success 200 {object} map
+// @Failure 403 :id is empty
+// @router /sample
+func (c *PingController) GetSample() {
+	hashMap := make(map[string]string, 2) //マップの宣言
+	hashMap["first"] = "Mike"
+	hashMap["last"] = "Smith"
+	c.Data["json"] = hashMap
+	c.ServeJSON()
+}
+
 // GetAll ...
 // @Title Get All
 // @Description get Ping
