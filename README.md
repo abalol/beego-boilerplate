@@ -1,5 +1,3 @@
-【色々いじってみてる】
-
 ## VSCode環境構築編
 1. goをローカルにインストールしてパスを通す。  
 [参考: goenvでgoをインストール 〜初心者向け〜](https://qiita.com/yut-kt/items/9f5ac1e788df61f64290)
