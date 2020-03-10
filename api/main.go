@@ -25,4 +25,7 @@ func init() {
 	datasource := fmt.Sprintf("%s:%s@tcp(%s:3306)/%s?charset=utf8", user, pass, host, db)
 	orm.RegisterDataBase("default", "mysql", datasource, 30)
 	orm.RunSyncdb("default", false, true)
+	if beego.BConfig.RunMode == "dev" {
+		orm.Debug = true
+	}
 }
