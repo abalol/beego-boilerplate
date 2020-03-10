@@ -1,7 +1,7 @@
 package main
 
 import (
-	_ "app/api/models"
+	_ "app/api/routers"
 	"fmt"
 
 	"github.com/astaxie/beego"
