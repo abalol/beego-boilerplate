@@ -7,10 +7,13 @@ import (
 	"strconv"
 	"strings"
 
+	"app/api/services/ping"
+	"app/api/services/sample"
+
 	"github.com/astaxie/beego"
 )
 
-//  PingController operations for Ping
+// PingController operations for Ping
 type PingController struct {
 	beego.Controller
 }
@@ -70,10 +73,10 @@ func (c *PingController) GetOne() {
 // @Failure 403 :id is empty
 // @router /sample
 func (c *PingController) GetSample() {
-	hashMap := make(map[string]string, 2) //マップの宣言
-	hashMap["first"] = "Mike"
-	hashMap["last"] = "Smith"
-	c.Data["json"] = hashMap
+	sample := sample.GetFirstSample()
+	print(sample)
+	test := ping.UpdateOnePings()
+	c.Data["json"] = test
 	c.ServeJSON()
 }
 
