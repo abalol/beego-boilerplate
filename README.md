@@ -3,7 +3,8 @@
 [参考: goenvでgoをインストール 〜初心者向け〜](https://qiita.com/yut-kt/items/9f5ac1e788df61f64290)
 
 1. echo $GOPATH してそのパスの配下にcd
-1. `git clone git@github.com:abalol/beego-boilerplate.git app` する
+1. `git clone git@github.com:abalol/beego-boilerplate.git app` する   
+(最後のappは変更してもOK。その時ソース上のパス要修正)
 1. `cd app`
 1. beeとbeegoをインストールする
 ```
@@ -16,10 +17,10 @@
 
 ## Scaffoldingを行う(Model定義 & Controller作成 & Migration）
 例
-`
+```
 docker exec -it go_app bash
 bee generate scaffold comment -fields="content:string" -driver=mysql -conn="test:password@tcp(db:3306)/test_db"
-`
+```
 
 bee generate scaffold [モデル名] -fields="カラム定義"  -driver=mysql -conn="[ユーザー]:[パスワード]@tcp(db:[ポート])/スキーマ"
 
