@@ -23,6 +23,7 @@ func (c *PingController) URLMapping() {
 	c.Mapping("Post", c.Post)
 	c.Mapping("GetOne", c.GetOne)
 	c.Mapping("GetAll", c.GetAll)
+	c.Mapping("GetSample", c.GetSample)
 	c.Mapping("Put", c.Put)
 	c.Mapping("Delete", c.Delete)
 }

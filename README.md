@@ -26,6 +26,9 @@ bee generate scaffold [モデル名] -fields="カラム定義"  -driver=mysql -c
 
 [カラムの型等は公式ドキュメントを参照](https://beego.me/docs/mvc/model/models.md#mysql)
 
+## テストを実行する
+docker-compose run --rm app go test ./tests
+
 ## ビルド
 
 ``` bash
