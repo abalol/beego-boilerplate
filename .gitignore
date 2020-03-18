@@ -1,2 +1,3 @@
-MySQL/*/*
-api/api
+# db volume
+/.docker/volumes/db/*
+!/.docker/volumes/db/.gitkeep

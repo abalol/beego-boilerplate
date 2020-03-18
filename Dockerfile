@@ -1,17 +1,14 @@
 
-FROM golang:1.14.0
+FROM golang:1.14-alpine
+
+WORKDIR /app
 
 ENV GOPATH $GOPATH:/go
 ENV PATH $PATH:$GOPATH/bin
 
-ADD ./api /go/src/app/api
-
-WORKDIR /go/src/app/api
-
-RUN apt-get update
-RUN go get "github.com/go-sql-driver/mysql"
+RUN apk add --update --no-cache git
 RUN go get "github.com/beego/bee"
-RUN go get "github.com/astaxie/beego"
-RUN go get "github.com/stretchr/testify"
 
-RUN go build
+COPY . .
+
+RUN go mod download
