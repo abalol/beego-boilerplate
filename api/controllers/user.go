@@ -1,9 +1,9 @@
 package controllers
 
 import (
-	"app/api/models"
 	"encoding/json"
 
+	"github.com/abalol/beego-boilerplate/api/models"
 	"github.com/astaxie/beego"
 )
 

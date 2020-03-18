@@ -1,8 +1,7 @@
 package sample
 
 import (
-	"app/api/models"
-
+	"github.com/abalol/beego-boilerplate/api/models"
 	"github.com/astaxie/beego/orm"
 )
 

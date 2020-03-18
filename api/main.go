@@ -1,9 +1,9 @@
 package main
 
 import (
-	_ "app/api/routers"
 	"fmt"
 
+	_ "github.com/abalol/beego-boilerplate/api/routers"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
 	_ "github.com/go-sql-driver/mysql"

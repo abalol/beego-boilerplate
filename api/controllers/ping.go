@@ -1,15 +1,14 @@
 package controllers
 
 import (
-	"app/api/models"
 	"encoding/json"
 	"errors"
 	"strconv"
 	"strings"
 
-	"app/api/services/ping"
-	"app/api/services/sample"
-
+	"github.com/abalol/beego-boilerplate/api/models"
+	"github.com/abalol/beego-boilerplate/api/services/ping"
+	"github.com/abalol/beego-boilerplate/api/services/sample"
 	"github.com/astaxie/beego"
 )
 

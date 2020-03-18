@@ -1,15 +1,15 @@
 package test
 
 import (
-	_ "app/api/controllers"
-	"app/api/models"
-	_ "app/api/routers"
 	"encoding/json"
 	"fmt"
 	"net/http"
 	"net/http/httptest"
 	"testing"
 
+	_ "github.com/abalol/beego-boilerplate/api/controllers"
+	"github.com/abalol/beego-boilerplate/api/models"
+	_ "github.com/abalol/beego-boilerplate/api/routers"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
 	_ "github.com/go-sql-driver/mysql"

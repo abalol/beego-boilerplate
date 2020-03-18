@@ -8,8 +8,7 @@
 package routers
 
 import (
-	"app/api/controllers"
-
+	"github.com/abalol/beego-boilerplate/api/controllers"
 	"github.com/astaxie/beego"
 )
 
